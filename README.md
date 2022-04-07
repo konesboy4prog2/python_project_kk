@@ -17,7 +17,7 @@ Das Ziel ist die Erstellung einer Bücher-Datenbank. Folgende Funktionalitäten 
 ####Vorschlagsfunktion einbauen
 Hier soll das Programm die Möglichkeit bieten, dem Nutzer passende Bücher zu vorschlagen. 
 Die Vorschläge entstehen basierend auf gelesene Bücher, Autoren oder Thematik. 
-
+Dies wird im Verlauf vom Projekt noch gemeinsam mit dem Dozenten abgesprochen und bei gegebenem Fall umgesetzt.
 ##Workflow
 * Dateineingabe
 * Datenverarbeitung
