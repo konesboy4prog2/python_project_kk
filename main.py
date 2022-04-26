@@ -34,8 +34,28 @@ def form():
     if request.method.lower() == "get":
         return render_template("formular.html")
     if request.method.lower() == "post":
-        name = request.form["vorname"]
+        name = request.form["Name vom Buch"]
         return name
+    if request.method.lower() == "get":
+        return render_template("formular.html")
+    if request.method.lower() == "post":
+        autor = request.form["Autor"]
+        return autor
+    if request.method.lower() == "get":
+        return render_template("formular.html")
+    if request.method.lower() == "post":
+        genre = request.form["Genre"]
+        return genre
+    if request.method.lower() == "get":
+        return render_template("formular.html")
+    if request.method.lower() == "post":
+        pages = request.form["Anzahl Seiten"]
+        return pages
+    if request.method.lower() == "get":
+        return render_template("formular.html")
+    if request.method.lower() == "post":
+        comment = request.form["Comment"]
+        return comment
 
 
 @app.route("/list")
@@ -75,7 +95,7 @@ def tabelle():
 
     },
 
-]
+            ]
     for bier in biere:
         preis = bier ["preis"]
         tax = berechnen(preis)
@@ -112,6 +132,12 @@ def datum_anzeigen():
     with open("jail_free_card.txt", encoding="utf8") as open_file:
         inhalt = open_file.read()
     return inhalt.replace("\n", "<br>")
+
+
+@app.route("/zufall")
+def zufall():
+    zahl = random.randint(1, 100)
+    return str(zahl)
 
 
 if __name__ == "__main__":
