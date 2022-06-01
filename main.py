@@ -41,12 +41,12 @@ def form():
 
 
 @app.route("/übersicht")
-def Übersicht():
-        bücherliste = []
+def ubersicht():
+        bucherliste = []
         data = opendata()
         for element in data:
-            bücherliste.append([element["Name"], element["Autor"], element["Genre"], element["Anzahl Seiten"], element["Comment"]])
-        return render_template("Übersicht.html", liste=bücherliste)
+            bucherliste.append([element["Name"], element["Autor"], element["Genre"], element["Anzahl Seiten"], element["Comment"]])
+        return render_template("übersicht.html", liste=bucherliste)
 
 
 

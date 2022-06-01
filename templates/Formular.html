@@ -21,19 +21,7 @@
 <h1> <center> Willkommen zur Eingabe </center> </h1>
 <a> Bitte Felder ausfüllen</a>
 <br></br>
-<!--<form method="POST">
-    <input type="text" name="Name" placeholder="Bitte geben Sie den Namen des Buches ein">
-    <br/><br/>
-    <input type="text" autor="Autor" placeholder="Bitte geben Sie den Namen des Autors ein">
-    <br/><br/>
-    <input type="text" genre="Genre" placeholder="Bitte geben Sie das Genre ein">
-    <br/><br/>
-    <input type="text" pages="Anzahl Seiten" placeholder="Bitte geben Sie die Anzahl Seiten ein">
-    <br/><br/>
-    <input type="text" comment="Comment" placeholder="Bitte geben Sie Ihre Bemerkung ein">
-    <br/><br/>
-    <button type="submit">Senden</button>
-</form>-->
+<!--https://getbootstrap.com/docs/4.0/components/forms/-->
 <form method="POST">
   <div class="form-group">
     <label for="Name">Name des Buches</label>
@@ -61,6 +49,10 @@
   <div class="form-group">
     <label for="Comment">Comment</label>
     <textarea class="form-control" name="Comment" id="Comment" rows="2"></textarea>
+  </div>
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="gelesen">
+    <label class="form-check-label" for="gelesen">gelesen</label>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
