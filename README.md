@@ -9,7 +9,7 @@ Das Ziel ist die Erstellung einer Bücher-Datenbank. Folgende Funktionalitäten 
 * Erfassen von Bücher
 * Erfassen der Thematik und des Autors
 * Übersicht aller erfassten Bücher
-* Die Auflistung nach Themen und Auto
+* Die Auflistung nach Themen und Autor
 * Die Suche der Bücher nach Thematik, Autor oder Titel über eine Suchfunktion
 * Markierung von gelesenen Bücher
 
@@ -23,3 +23,6 @@ Dies wird im Verlauf vom Projekt noch gemeinsam mit dem Dozenten abgesprochen un
 * Datenverarbeitung
 * Datenausgabe
 * Flussdiagramm zu WebApp
+
+# Flussdiagramm zu Webapp
+

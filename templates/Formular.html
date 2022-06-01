@@ -5,11 +5,24 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
     <title>Formular</title>
 </head>
-
-<---https://draeger-it.blog/python-flask-5-formular-erstellen-daten-verarbeiten/--->
+<div class="container">
+    <header class="d-flex justify-content-center py-3">
+      <ul class="nav nav-pills">
+          <li class="nav-item"><a href="http://127.0.0.1:5000" class="nav-link" aria-current="page">Home</a></li>
+          <li class="nav-item"><a href="http://127.0.0.1:5000/form" class="nav-link" aria-current="page">Buch erfassen</a></li>
+          <li class="nav-item"><a href="http://127.0.0.1:5000/übersicht" class="nav-link">Übersicht</a></li>
+          <li class="nav-item"><a href="http://127.0.0.1:5000/suche" class="nav-link">Suche</a></li>
+          <li class="nav-item"><a href="http://127.0.0.1:5000/gelesen" class="nav-link">Gelesen</a></li>
+          <li class="nav-item"><a href="http://127.0.0.1:5000/about" class="nav-link">About</a></li>
+      </ul>
+    </header>
+  </div>
+<!--https://draeger-it.blog/python-flask-5-formular-erstellen-daten-verarbeiten/-->
+<h1> <center> Willkommen zur Eingabe </center> </h1>
 <a> Bitte Felder ausfüllen</a>
-<form method="POST">
-    <input type="text" name="Name vom Buch" placeholder="Bitte geben Sie den Namen des Buches ein">
+<br></br>
+<!--<form method="POST">
+    <input type="text" name="Name" placeholder="Bitte geben Sie den Namen des Buches ein">
     <br/><br/>
     <input type="text" autor="Autor" placeholder="Bitte geben Sie den Namen des Autors ein">
     <br/><br/>
@@ -20,6 +33,36 @@
     <input type="text" comment="Comment" placeholder="Bitte geben Sie Ihre Bemerkung ein">
     <br/><br/>
     <button type="submit">Senden</button>
+</form>-->
+<form method="POST">
+  <div class="form-group">
+    <label for="Name">Name des Buches</label>
+    <input name="Name" class="form-control" id="Name" placeholder="Name eingeben">
+    <br>
+    <label for="Autor">Name des Autors</label>
+    <input name="Autor" class="form-control" id="Autor" placeholder="Autor eingeben">
+    <br>
+    <label for="Anzahl Seiten">Anzahl Seiten</label>
+    <input name="Anzahl Seiten" class="form-control" id="Anzahl Seiten" placeholder="Seitenzahl">
+    <br>
+  </div>
+  <div class="form-group">
+    <label for="Genre">Genre auswählen</label>
+    <select class="form-control" name="Genre" id="Genre">
+      <option>Roman</option>
+      <option>Krimi</option>
+      <option>Science Fiction</option>
+      <option>Liebe</option>
+      <option>Sachbücher</option>
+      <option>Restliche Bücher</option>
+    </select>
+      <br>
+  </div>
+  <div class="form-group">
+    <label for="Comment">Comment</label>
+    <textarea class="form-control" name="Comment" id="Comment" rows="2"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 
 <body>

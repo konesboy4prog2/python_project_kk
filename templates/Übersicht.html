@@ -19,7 +19,32 @@
       </ul>
     </header>
   </div>
-<h1> <center>Willkommen zur Bücherdatenbank </center></h1>
-<a> <center>Mit dieser Datenbank wirst Du eine Übersicht erhalten, welche Bücher du lesen möchtest und welche du gelesen hast. Zusätzlich wirst Du die Möglichkeit haben, nach Büchern zu suchen. </center> </a>
+<h1> <center> Willkommen zur Übersicht </center> </h1>
+<a>Hier findest du alle Bücher, welche du bisher eingetragen hast.</a>
+
+<div class="m-5">
+    <table class="table table-striped">
+        <thead class="thead-dark">
+        <th style="width: 30%" scope="col">Name</th>
+            <th style="width: 10%" scope="col">Autor</th>
+            <th style="width: 30%" scope="col">Genre</th>
+            <th style="width: 30%" scope="col">Anzahl Seiten</th>
+            <th style="width: 30%" scope="col">Comment</th>
+        </thead>
+        <tbody>
+
+            {% for element in liste %}
+            <tr>
+
+                <td class="vw-2">{{ element[0] }}</td>
+                <td>{{ element[1] }}</td>
+                <td>{{ element[2] }}</td>
+                <td>{{ element[3] }}</td>
+                <td>{{ element[4] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
 </body>
 </html>
