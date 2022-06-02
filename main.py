@@ -1,9 +1,13 @@
+import random
+
+import plotly.express as px
+
 from flask import Flask
 from flask import render_template
-from flask import url_for
 from flask import request
+from flask import url_for
+
 from mydata import opendata, storedata
-import random
 
 app = Flask("__name__")
 
@@ -26,12 +30,13 @@ def form():
     if request.method.lower() == "get":
         return render_template("formular.html")
     if request.method.lower() == "post":
-        a=request.form.get("Name") #json Veknküpfung - holt Daten aus Formular ab und speichert sie ab
-        b=request.form.get("Autor")
+        name = request.form.get("Name") #json Veknküpfung - holt Daten aus Formular ab und speichert sie ab
+        autor = request.form.get("Autor")
         c=request.form.get("Genre")
         d=request.form.get("Anzahl Seiten")
         e=request.form.get("Comment")
-        my_data = {"Name": a, "Autor": b, "Genre": c, "Anzahl Seiten": d, "Comment": e}
+        f= request.form.getlist("gelesen")
+        my_data = {"Name": name, "Autor": autor, "Genre": c, "Anzahl Seiten": d, "Comment": e, "gelesen": f}
 
         data=opendata()
         data.append(my_data)
@@ -49,15 +54,28 @@ def ubersicht():
         return render_template("übersicht.html", liste=bucherliste)
 
 
-
-@app.route("/suche")
-def suche():
-    return render_template("suche.html")
+@app.route("/genre", methods=["POST", "GET"])
+def genre_filter():
+    if request.method.lower() == "get":
+        return render_template("genre.html")
+    if request.method.lower() == "post":
+        genre = request.form.get("Genre")
+    genrefilter = []
+    data = opendata()
+    for element in data:
+        if element["Genre"] == genre:
+            genrefilter.append([element["Name"], element["Autor"], element["Genre"], element["Anzahl Seiten"], element["Comment"]])
+    return render_template("genre.html", liste=genrefilter)
 
 
 @app.route("/gelesen")
 def gelesen():
-    return render_template("gelesen.html")
+        gelesen = []
+        data = opendata()
+        for element in data:
+            if element["gelesen"] == ["on"]:
+                gelesen.append([element["Name"], element["Autor"], element["Genre"], element["Anzahl Seiten"], element["Comment"]])
+        return render_template("übersicht.html", liste=gelesen)
 
 
 if __name__ == "__main__":

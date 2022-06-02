@@ -19,10 +19,23 @@
       </ul>
     </header>
   </div>
-<h1> <center>Willkommen zu den gelesenen Bücher </center></h1>
-<a><center>Hier findest du alle Bücher, welche du bisher gelesen hast.</center></a>
+<h1> <center> Willkommen zum Genre-Filter </center></h1>
+<a><center>Hier kannst du deine bisherigen Einträge nach Genre filtern und ausgeben lassen.</center></a>
+<br>
+<br>
+<form method="POST">
+    <a><center> Genre auswählen</center></a>
+    <select name="Genre" >
+       <option>Roman</option>
+      <option>Krimi</option>
+      <option>Science Fiction</option>
+      <option>Liebe</option>
+      <option>Sachbücher</option>
+      <option>Restliche Bücher</option>
+    </select>
+    <button type="submit">Senden</button>
 
-<div class="m-5">
+    <div class="m-5">
     <table class="table table-hover">
         <thead class="thead-dark">
             <th style="width: 20%" scope="col">Name</th>

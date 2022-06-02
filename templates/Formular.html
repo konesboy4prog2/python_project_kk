@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>k4prog2</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='my_style.css')}}">
     <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
     <title>Formular</title>
 </head>
@@ -11,7 +13,7 @@
           <li class="nav-item"><a href="http://127.0.0.1:5000" class="nav-link" aria-current="page">Home</a></li>
           <li class="nav-item"><a href="http://127.0.0.1:5000/form" class="nav-link" aria-current="page">Buch erfassen</a></li>
           <li class="nav-item"><a href="http://127.0.0.1:5000/übersicht" class="nav-link">Übersicht</a></li>
-          <li class="nav-item"><a href="http://127.0.0.1:5000/suche" class="nav-link">Suche</a></li>
+          <li class="nav-item"><a href="http://127.0.0.1:5000/genre" class="nav-link">Genre-Filter</a></li>
           <li class="nav-item"><a href="http://127.0.0.1:5000/gelesen" class="nav-link">Gelesen</a></li>
           <li class="nav-item"><a href="http://127.0.0.1:5000/about" class="nav-link">About</a></li>
       </ul>
@@ -51,7 +53,7 @@
     <textarea class="form-control" name="Comment" id="Comment" rows="2"></textarea>
   </div>
   <div class="form-check">
-    <input type="checkbox" class="form-check-input" id="gelesen">
+    <input name="gelesen" type="checkbox" class="form-check-input" id="gelesen">
     <label class="form-check-label" for="gelesen">gelesen</label>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
