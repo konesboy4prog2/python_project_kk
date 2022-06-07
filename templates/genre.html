@@ -1,30 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>k4prog2</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='my_style.css')}}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
-</head>
+{% include "header.html" %}
+{% include "navbar.html" %}
 <body>
-<div class="container">
-    <header class="d-flex justify-content-center py-3">
-      <ul class="nav nav-pills">
-          <li class="nav-item"><a href="http://127.0.0.1:5000" class="nav-link" aria-current="page">Home</a></li>
-          <li class="nav-item"><a href="http://127.0.0.1:5000/form" class="nav-link" aria-current="page">Buch erfassen</a></li>
-          <li class="nav-item"><a href="http://127.0.0.1:5000/übersicht" class="nav-link">Übersicht</a></li>
-          <li class="nav-item"><a href="http://127.0.0.1:5000/genre" class="nav-link">Genre-Filter</a></li>
-          <li class="nav-item"><a href="http://127.0.0.1:5000/gelesen" class="nav-link">Gelesen</a></li>
-          <li class="nav-item"><a href="http://127.0.0.1:5000/about" class="nav-link">About</a></li>
-      </ul>
-    </header>
-  </div>
 <h1> <center> Willkommen zum Genre-Filter </center></h1>
 <a><center>Hier kannst du deine bisherigen Einträge nach Genre filtern und ausgeben lassen.</center></a>
 <br>
-<br>
-<form method="POST">
-    <a><center> Genre auswählen</center></a>
+<div class="container">
+<a>Genre auswählen</a>
+    <form method="POST">
     <select name="Genre" >
        <option>Roman</option>
       <option>Krimi</option>
@@ -34,7 +16,8 @@
       <option>Restliche Bücher</option>
     </select>
     <button type="submit">Senden</button>
-
+    </form>
+</div>
     <div class="m-5">
     <table class="table table-hover">
         <thead class="thead-dark">

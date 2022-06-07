@@ -14,10 +14,7 @@ app = Flask("__name__")
 
 @app.route("/")
 def hello():
-    names = ["Gian-Luca", "Luca", "Kones", "Manu", "Marion"]
-    name_choice = random.choice(names)
-    about_link = url_for("about")
-    return render_template("index.html", name=name_choice, link=about_link)
+    return render_template("index.html")
 
 
 @app.route("/about")
