@@ -19,7 +19,7 @@ def hello():
 
 @app.route("/about")
 def about():
-    return "Mein Name ist Karthik Kones und ich bin der Initiator dieser Seite. Erstellt wurde diese Seite in Zusammenarbeit mit meinem Dozenten."
+    return render_template("about.html")
 
 
 @app.route("/form", methods=["get", "post"])

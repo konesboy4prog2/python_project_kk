@@ -26,5 +26,13 @@
     "gelesen": [
       "on"
     ]
+  },
+  {
+    "Name": "Die Geschichte der Menschheit",
+    "Autor": "Harari",
+    "Genre": "Sachb\u00fccher",
+    "Anzahl Seiten": "333",
+    "Comment": "must read!",
+    "gelesen": []
   }
 ]

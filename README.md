@@ -30,4 +30,10 @@ Dies wird im Verlauf vom Projekt noch gemeinsam mit dem Dozenten abgesprochen un
 
 ***
 # Flussdiagramm zu Webapp
+![](Flussdiagramm.png)
 
+***
+# Selbstreflexion
+
+***
+# FAQ
