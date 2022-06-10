@@ -1,11 +1,8 @@
-import random
-
 import plotly.express as px
 
 from flask import Flask
 from flask import render_template
 from flask import request
-from flask import url_for
 
 from mydata import opendata, storedata
 
@@ -27,7 +24,7 @@ def form():
     if request.method.lower() == "get":
         return render_template("formular.html")
     if request.method.lower() == "post":
-        name = request.form.get("Name") #json Veknküpfung - holt Daten aus Formular ab und speichert sie ab
+        name = request.form.get("Name") #json Verknüpfung - holt Daten aus Formular ab und speichert sie ab
         autor = request.form.get("Autor")
         c=request.form.get("Genre")
         d=request.form.get("Anzahl Seiten")

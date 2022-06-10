@@ -1,23 +1,5 @@
 [
   {
-    "Name": "hi",
-    "Autor": "hi",
-    "Genre": "Liebe",
-    "Anzahl Seiten": "33",
-    "Comment": "ok",
-    "gelesen": [
-      "on"
-    ]
-  },
-  {
-    "Name": "ho",
-    "Autor": "he",
-    "Genre": "Restliche B\u00fccher",
-    "Anzahl Seiten": "22",
-    "Comment": "",
-    "gelesen": []
-  },
-  {
     "Name": "Der Alchimist",
     "Autor": "Paolo Coelho",
     "Genre": "Roman",
@@ -34,5 +16,109 @@
     "Anzahl Seiten": "333",
     "Comment": "must read!",
     "gelesen": []
+  },
+  {
+    "Name": "Rich dad Poor dad",
+    "Autor": "Robert Kiyosaki",
+    "Genre": "Sachb\u00fccher",
+    "Anzahl Seiten": "222",
+    "Comment": "heavy stuff",
+    "gelesen": []
+  },
+  {
+    "Name": "Safari des Lebens",
+    "Autor": "John Strelecky",
+    "Genre": "Roman",
+    "Anzahl Seiten": "212",
+    "Comment": "nice one",
+    "gelesen": [
+      "on"
+    ]
+  },
+  {
+    "Name": "Das Cafe am Rande der Welt",
+    "Autor": "John Strelecky",
+    "Genre": "Roman",
+    "Anzahl Seiten": "210",
+    "Comment": "empfehlenswert",
+    "gelesen": [
+      "on"
+    ]
+  },
+  {
+    "Name": "The Big Five For Live",
+    "Autor": "John Strelecky",
+    "Genre": "Roman",
+    "Anzahl Seiten": "244",
+    "Comment": "",
+    "gelesen": []
+  },
+  {
+    "Name": "Der Weg des Bogens",
+    "Autor": "Paolo Coelho",
+    "Genre": "Roman",
+    "Anzahl Seiten": "333",
+    "Comment": "",
+    "gelesen": []
+  },
+  {
+    "Name": "Doktor Ain",
+    "Autor": "James Tiptree Jr.",
+    "Genre": "Science Fiction",
+    "Anzahl Seiten": "430",
+    "Comment": "",
+    "gelesen": []
+  },
+  {
+    "Name": "Die Drachenreiter von Pern",
+    "Autor": "Anne McCaffrey",
+    "Genre": "Science Fiction",
+    "Anzahl Seiten": "280",
+    "Comment": "",
+    "gelesen": []
+  },
+  {
+    "Name": "Evolution",
+    "Autor": "Stephen Baxter",
+    "Genre": "Science Fiction",
+    "Anzahl Seiten": "1000",
+    "Comment": "",
+    "gelesen": []
+  },
+  {
+    "Name": "Die drei ??? und der H\u00f6llenzug",
+    "Autor": "Cally Stronk ",
+    "Genre": "Krimi",
+    "Anzahl Seiten": "160",
+    "Comment": "",
+    "gelesen": []
+  },
+  {
+    "Name": "Milcht\u00fcten Alarm - Ein Fall f\u00fcr Kwiatkowski",
+    "Autor": "J\u00fcrgen Banscherus",
+    "Genre": "Krimi",
+    "Anzahl Seiten": "100",
+    "Comment": "Klassiker ",
+    "gelesen": []
+  },
+  {
+    "Name": "The monk who sold his Ferrari",
+    "Autor": "Robin Sharma",
+    "Genre": "Restliche B\u00fccher",
+    "Anzahl Seiten": "222",
+    "Comment": "Lieblingsbuch",
+    "gelesen": [
+      "on"
+    ]
+  },
+  {
+    "Name": "The Power ",
+    "Autor": "Rhonda Byrne",
+    "Genre": "Restliche B\u00fccher",
+    "Anzahl Seiten": "360",
+    "Comment": "absolut nice",
+    "gelesen": [
+      "on"
+    ]
   }
 ]
