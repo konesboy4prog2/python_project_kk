@@ -1,10 +1,10 @@
-{% include "header.html" %}
-{% include "navbar.html" %}
+{% include "header.html" %} <!--jinja-logik für die übernahme der im header.html eingebauten Codes-->
+{% include "navbar.html" %} <!--jinja-logik für die übernahme der im navbar.html eingebauten Codes-->
 <body>
-<h1> <center>Wie die Bücherdatenbank entstand</center></h1>
-<a><center>Mein Name ist Karthik Kones und ich bin der Initiator dieser Seite. Erstellt wurde diese Seite in Zusammenarbeit mit meinem Dozenten.</center> </a>
+<h1> <center>Wie die Bücherdatenbank entstand</center></h1> <!--Titel-->
+<a><center>Mein Name ist Karthik Kones und ich bin der Initiator dieser Seite. Erstellt wurde diese Seite in Zusammenarbeit mit meinem Dozenten.</center> </a> <!--Text-->
 <br>
-<!--https://testbytes.technoallianceindia.com/wp-content/uploads/2019/06/Untitled-54-1.png-->
+<!--Bildquelle: https://testbytes.technoallianceindia.com/wp-content/uploads/2019/06/Untitled-54-1.png-->
 <center><img src="{{ url_for('static', filename='understanding_code.png') }}" height="300px"></center>
 
 </body>

@@ -1,16 +1,16 @@
-{% include "header.html" %}
-{% include "navbar.html" %}
+{% include "header.html" %} <!--jinja-logik für die übernahme der im header.html eingebauten Codes-->
+{% include "navbar.html" %} <!--jinja-logik für die übernahme der im navbar.html eingebauten Codes-->
 <body>
-<!--https://draeger-it.blog/python-flask-5-formular-erstellen-daten-verarbeiten/-->
-<h1> <center> Willkommen zur Eingabe </center> </h1>
-<a> <center>Erfasse hier dein Buch!</a></center>
-<br></br>
-<!--https://getbootstrap.com/docs/4.0/components/forms/-->
-<div class="container">
-<form method="POST">
-  <div class="form-group">
-    <label for="Name">Name des Buches</label>
-    <input name="Name" class="form-control" id="Name" placeholder="Name eingeben">
+<!--Quelle:https://draeger-it.blog/python-flask-5-formular-erstellen-daten-verarbeiten/-->
+<h1> <center> Willkommen zur Eingabe </center></h1>
+<a> <center>Erfasse hier dein Buch!</center></a>
+<br>
+<!--Quelle:https://getbootstrap.com/docs/4.0/components/forms/-->
+<div class="container"> <!--Container für die mittige Platzierung-->
+<form method="POST"> <!--Formular-Eingaben per Post übertragen-->
+  <div class="form-group"> <!--Formular Class-->
+    <label for="Name">Name des Buches</label> <!--Einzugebender Wert (gleich für folgende)-->
+    <input name="Name" class="form-control" id="Name" placeholder="Name eingeben"> <!--Eingabefeld (gleich für folgende)-->
     <br>
     <label for="Autor">Name des Autors</label>
     <input name="Autor" class="form-control" id="Autor" placeholder="Autor eingeben">
@@ -19,7 +19,7 @@
     <input name="Anzahl Seiten" class="form-control" id="Anzahl Seiten" placeholder="Seitenzahl">
     <br>
   </div>
-  <div class="form-group">
+  <div class="form-group"> <!--Dropdown Form-->
     <label for="Genre">Genre auswählen</label>
     <select class="form-control" name="Genre" id="Genre">
       <option>Roman</option>
@@ -36,12 +36,12 @@
     <textarea class="form-control" name="Comment" id="Comment" rows="2"></textarea>
   </div>
   <br>
-  <div class="form-check">
+  <div class="form-check"> <!--checkbox für optionales anklicken-->
     <input name="gelesen" type="checkbox" class="form-check-input" id="gelesen">
     <label class="form-check-label" for="gelesen">gelesen</label>
   </div>
   <br>
-  <button type="submit" class="btn btn-primary">Erfassen</button>
+  <button type="submit" class="btn btn-primary">Erfassen</button> <!--Button um Formular abzugeben-->
 </form>
 </div>
 

@@ -67,7 +67,7 @@ def about():
 
 @app.route("/form", methods=["get", "post"]) #Mitteilung an App, welche URL ausgeführt werden soll + Methode Post und Get lassen die Dateingabe und Verwaltung zu
 def form(): #Funktion für die obengenannte URL
-    if request.method.lower() == "get": #Mit dem Formular werden Daten per Get abgeholt
+    if request.method.lower() == "get": #Mit dem Formular werden Daten per Get abgeholt - Übergabe von Parametern
         return render_template("formular.html")
     if request.method.lower() == "post":
         name = request.form.get("Name") #json Verknüpfung - holt Daten aus Formular ab und speichert sie ab
@@ -96,7 +96,7 @@ def ubersicht(): #Funktion für die URL
 
 @app.route("/genre", methods=["POST", "GET"])#Mitteilung an App, welche URL ausgeführt werden soll + Methode Post und Get lassen die Dateingabe und Verwaltung zu
 def genre_filter(): #Funktion für die URL
-    if request.method.lower() == "get": #hier werden Daten per Get abgeholt
+    if request.method.lower() == "get": #hier werden Daten per Get abgeholt - Übergabe von Parametern
         return render_template("genre.html") #genre.html mit diesem Befehl ausgegeben
     if request.method.lower() == "post": #post-Methode für die Ausgabe der Genre
         genre = request.form.get("Genre")
@@ -119,4 +119,4 @@ def gelesen():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+    app.run(debug=True, port=5000) #wenn Main gestartet wird, soll Flask Debug einschalten und auf dem Port 5000 laufen
