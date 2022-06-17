@@ -130,5 +130,29 @@
     "gelesen": [
       "on"
     ]
+  },
+  {
+    "Name": "Liebe macht blind",
+    "Autor": "Jonas Hofmann",
+    "Genre": "Liebe",
+    "Anzahl Seiten": "150",
+    "Comment": "",
+    "gelesen": []
+  },
+  {
+    "Name": "Inner Engineering",
+    "Autor": "Sadhguru",
+    "Genre": "Restliche B\u00fccher",
+    "Anzahl Seiten": "544",
+    "Comment": "scheint spannend zu sein",
+    "gelesen": []
+  },
+  {
+    "Name": "Was ich gelernt habe",
+    "Autor": "John Strelecky",
+    "Genre": "Roman",
+    "Anzahl Seiten": "120",
+    "Comment": "",
+    "gelesen": []
   }
 ]

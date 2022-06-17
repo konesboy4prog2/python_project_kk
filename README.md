@@ -42,4 +42,3 @@ Dank den Inputs des Dozenten und dem Internet konnte ich auf informative und hil
 Nachdem ich die Verbindung zwischen dem main.py und die einzelnen html-Seiten verstanden habe, konnte ich die benötgten Seiten aufsetzen und mithilfe von Bootstrap auch optische Verbesserungen vornehmen. Danach ging es darum die Funktionen pro Unterseite zu programmieren. Es war nicht einfach, da immer wieder neue Hindernisse auftauchten. 
 Dank dem Tutoring konnten die Knoten gelöst werden und am Ende eine funktionierende Seite realisiert werden. Eine der grössten Herausforderung hatte ich bei der Erstellung der Statistik mit Plotly. 
 ***
-# FAQ

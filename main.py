@@ -48,12 +48,14 @@ def grafik():
     genre = ["Roman", "Krimi", "SciFi", "Liebe", "Sachbücher", "Restliche Bücher"]
     print(genre)
     print(summe_buecher)
+    #2 unabhängige Listen -> Wert 1 aus Liste 1 wird Wert 1 aus Liste 2 zugewiesen -> genau so für die anderen auch!
 
+#Visualisierung mit Plotly
     fig = px.bar(x=genre, y=summe_buecher)
     fig.update_layout(
-        title="Gesamte Ausgaben pro Kategorie",
-        xaxis_title="Kategorien",
-        yaxis_title="Ausgaben")
+        title="Bücher pro Genre in der Datenbank",
+        xaxis_title="Genre",
+        yaxis_title="Anzahl Bücher")
     div = plot(fig, output_type="div")
     return render_template("Index.html", visual=div)
 
