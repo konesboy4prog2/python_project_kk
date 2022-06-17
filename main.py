@@ -1,12 +1,8 @@
-
-
-import plotly.express as px
-from plotly.offline import plot
-
 from flask import Flask
 from flask import render_template
 from flask import request
-
+import plotly.express as px
+from plotly.offline import plot
 from mydata import opendata, storedata
 
 app = Flask("__name__")
@@ -15,26 +11,51 @@ app = Flask("__name__")
 @app.route("/")
 def grafik():
     data = opendata()
-    buchgenre = {}
-    counter = 0
-    for alle_buecher in data:
-        if alle_buecher["Genre"] in buchgenre: # Fragt ab, ob Kategorie in Dict
-            counter = counter + 1
-            buchgenre[alle_buecher["Genre"]] = counter  # Summiert alle Ausgaben einer entsprechenden Kategorie
-        else:  # Erstellt Dict und visualisiert
-            buchgenre[alle_buecher["Genre"]] = counter  # Füllt leeres Dict auf
-        #   Erstellt Listen für Datenvisualsierung
-    genre = list(buchgenre.keys())  # Holt alle Genre und listet sie auf - wandelt dann in Liste um (f. Plotly)
-    summe_buecher = list(buchgenre.values())  # Holt alle Summen und listet sie auf - wandelt dann in Liste um (f. Plotly)
+    counter_Roman = 0
+    counter_Krimi = 0
+    counter_SciFi = 0
+    counter_Liebe = 0
+    counter_Sachbücher = 0
+    counter_Rest = 0
+    summe_buecher = []
 
-    #   Visualisierung mit Plotly
+    for alle_elemente in data:
+        for values in alle_elemente.values():
+            if values == "Roman":
+                counter_Roman = counter_Roman + 1
+
+            elif values == "Krimi":
+                counter_Krimi = counter_Krimi + 1
+
+            elif values == "Science Fiction":
+                counter_SciFi = counter_SciFi + 1
+
+            elif values == "Liebe":
+                counter_Liebe = counter_Liebe + 1
+
+            elif values == "Sachbücher":
+                counter_Sachbücher = counter_Sachbücher + 1
+
+            elif values == "Restliche Bücher":
+                counter_Rest = counter_Rest + 1
+    summe_buecher.append(counter_Roman)
+    summe_buecher.append(counter_Krimi)
+    summe_buecher.append(counter_SciFi)
+    summe_buecher.append(counter_Liebe)
+    summe_buecher.append(counter_Sachbücher)
+    summe_buecher.append(counter_Rest)
+
+    genre = ["Roman", "Krimi", "SciFi", "Liebe", "Sachbücher", "Restliche Bücher"]
+    print(genre)
+    print(summe_buecher)
+
     fig = px.bar(x=genre, y=summe_buecher)
     fig.update_layout(
-        title="Bücher pro Genre",
-        xaxis_title="Genre",
-        yaxis_title="Bücher")
+        title="Gesamte Ausgaben pro Kategorie",
+        xaxis_title="Kategorien",
+        yaxis_title="Ausgaben")
     div = plot(fig, output_type="div")
-    return render_template("index.html", visual=div)
+    return render_template("Index.html", visual=div)
 
 
 @app.route("/about")
