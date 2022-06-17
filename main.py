@@ -1,6 +1,7 @@
 
 
 import plotly.express as px
+from plotly.offline import plot
 
 from flask import Flask
 from flask import render_template
@@ -12,8 +13,28 @@ app = Flask("__name__")
 
 
 @app.route("/")
-def hello():
-    return render_template("index.html")
+def grafik():
+    data = opendata()
+    buchgenre = {}
+    counter = 0
+    for alle_buecher in data:
+        if alle_buecher["Genre"] in buchgenre: # Fragt ab, ob Kategorie in Dict
+            counter = counter + 1
+            buchgenre[alle_buecher["Genre"]] = counter  # Summiert alle Ausgaben einer entsprechenden Kategorie
+        else:  # Erstellt Dict und visualisiert
+            buchgenre[alle_buecher["Genre"]] = counter  # Füllt leeres Dict auf
+        #   Erstellt Listen für Datenvisualsierung
+    genre = list(buchgenre.keys())  # Holt alle Genre und listet sie auf - wandelt dann in Liste um (f. Plotly)
+    summe_buecher = list(buchgenre.values())  # Holt alle Summen und listet sie auf - wandelt dann in Liste um (f. Plotly)
+
+    #   Visualisierung mit Plotly
+    fig = px.bar(x=genre, y=summe_buecher)
+    fig.update_layout(
+        title="Bücher pro Genre",
+        xaxis_title="Genre",
+        yaxis_title="Bücher")
+    div = plot(fig, output_type="div")
+    return render_template("index.html", visual=div)
 
 
 @app.route("/about")
