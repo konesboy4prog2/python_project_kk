@@ -19,7 +19,7 @@ def grafik(): #Funktion beim Aufruf der URL
     counter_Rest = 0
     summe_buecher = []
 
-    for alle_elemente in data: #Elemente der data.json werden hier in einem Loop geprüft
+    for alle_elemente in data: #Elemente der data.json werden hier in einem Loop geprüft. Damit sollen Elemente für die Grafik definiert werden.
         for values in alle_elemente.values(): #Values der Elemente werden nach Genre in einem Loop geprüft und dazugezählt
             if values == "Roman":
                 counter_Roman = counter_Roman + 1
@@ -38,7 +38,7 @@ def grafik(): #Funktion beim Aufruf der URL
 
             elif values == "Restliche Bücher":
                 counter_Rest = counter_Rest + 1
-    summe_buecher.append(counter_Roman) #alle gezählten werden zur Liste summe_buecher hinzugefügt
+    summe_buecher.append(counter_Roman) #alle gezählten Bücher werden zur Liste summe_buecher hinzugefügt
     summe_buecher.append(counter_Krimi)
     summe_buecher.append(counter_SciFi)
     summe_buecher.append(counter_Liebe)
@@ -57,7 +57,7 @@ def grafik(): #Funktion beim Aufruf der URL
         xaxis_title="Genre",
         yaxis_title="Anzahl Bücher")
     div = plot(fig, output_type="div")
-    return render_template("index.html", visual=div) #index.html mit diesem Befehl ausgegeben und die visual steht für den Jinja-Eintrag auf der HTMl-Seite
+    return render_template("index.html", visual=div) #index.html mit diesem Befehl ausgegeben und visual steht für den Jinja-Eintrag auf der HTMl-Seite
 
 
 @app.route("/about") #Mitteilung an App, welche URL ausgeführt werden soll
@@ -86,7 +86,7 @@ def form(): #Funktion für die obengenannte URL
 
 
 @app.route("/übersicht") #Mitteilung an App, welche URL ausgeführt werden soll
-def ubersicht(): #Funktion für die URL
+def ubersicht(): #Funktion für die URL (Übersicht mit allen Einträgen)
         bucherliste = [] #Liste, worin die eingegeben Einträge aus dem json abgelegt werden
         data = opendata() #wo die Daten vorhanden sind
         for element in data: #For-Loop damit die gespeichereten Daten für die neue Liste gefunden werden können
@@ -95,7 +95,7 @@ def ubersicht(): #Funktion für die URL
 
 
 @app.route("/genre", methods=["POST", "GET"])#Mitteilung an App, welche URL ausgeführt werden soll + Methode Post und Get lassen die Dateingabe und Verwaltung zu
-def genre_filter(): #Funktion für die URL
+def genre_filter(): #Funktion für die URL (Filterfunktion für die einzelnen Genres)
     if request.method.lower() == "get": #hier werden Daten per Get abgeholt - Übergabe von Parametern
         return render_template("genre.html") #genre.html mit diesem Befehl ausgegeben
     if request.method.lower() == "post": #post-Methode für die Ausgabe der Genre
@@ -109,7 +109,7 @@ def genre_filter(): #Funktion für die URL
 
 
 @app.route("/gelesen") #Mitteilung an App, welche URL ausgeführt werden soll
-def gelesen():
+def gelesen(): #Übersicht der gelesenen Bücher
         gelesen = [] #neue Liste für die gelesenen Bücher
         data = opendata()
         for element in data: #for-Loop für data um Elemente durchsuchen zu können

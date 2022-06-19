@@ -1,12 +1,12 @@
-{% include "header.html" %}
-{% include "navbar.html" %}
+{% include "header.html" %} <!--jinja-logik für die übernahme der im header.html eingebauten Codes-->
+{% include "navbar.html" %} <!--jinja-logik für die übernahme der im navbar.html eingebauten Codes-->
 <body>
 <h1> <center> Willkommen zum Genre-Filter </center></h1>
 <a><center>Hier kannst du deine bisherigen Einträge nach Genre filtern und ausgeben lassen.</center></a>
 <br>
 <div class="container">
 <a>Genre auswählen</a>
-    <form method="POST">
+    <form method="POST"> <!--Dropdown Menü-->
     <select name="Genre" >
        <option>Roman</option>
       <option>Krimi</option>
@@ -15,11 +15,11 @@
       <option>Sachbücher</option>
       <option>Restliche Bücher</option>
     </select>
-    <button type="submit">Ausgeben</button>
+    <button type="submit">Ausgeben</button> <!--Button zum Bestätigen-->
     </form>
 </div>
-    <div class="m-5">
-    <table class="table table-hover">
+    <div class="m-5"><!--Spacing-->
+    <table class="table table-hover"> #Tabelle für die Ausgabe der Daten
         <thead class="thead-dark">
             <th style="width: 20%" scope="col">Name</th>
             <th style="width: 20%" scope="col">Autor</th>
@@ -29,16 +29,16 @@
         </thead>
         <tbody>
 
-            {% for element in liste %}
+            {% for element in liste %} <!--for-loop für Elemente aus der Liste, welche bei der app.route unter Funktionen zum Schluss angegeben wurde, werden hier aufgerufen-->
             <tr>
 
-                <td class="vw-2">{{ element[0] }}</td>
+                <td class="vw-2">{{ element[0] }}</td> <!--Variabeln im html einbauen aus der Liste-->
                 <td>{{ element[1] }}</td>
                 <td>{{ element[2] }}</td>
                 <td>{{ element[3] }}</td>
                 <td>{{ element[4] }}</td>
             </tr>
-            {% endfor %}
+            {% endfor %} <!--Aufruf der Liste und for-loop beenden-->
         </tbody>
     </table>
 </div>
